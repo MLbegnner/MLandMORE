@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 '''
     该LMS目标值为0，然后根据是否大于0来设置输出值
+    若用于逻辑递归，则使得X=1/(1+exp(-1*(theta*x)))//该函数是逻辑函数
+    使用是batch gradient decent
+    后面另一个类是stochastic gradient decent ,如果使用这个类，循环次数应当适当增加
+    因为该处直接跟0比较，然后返回相应的数，真正的LMS应该结束于错误连续多次小于摸一个固定的值
 '''
 import numpy as np
 import pandas as pd
@@ -27,6 +31,37 @@ class Perceptron(object):
                 errors += int(update != 0.0)
                 self.errors_.append(errors)
                 pass
+            pass
+        pass
+
+    def net_input(self, X):
+        return np.dot(X, self.w_[1:]) + self.w_[0]
+        pass
+
+    def predict(self, X):
+        return np.where(self.net_input(X) >= 0.0 , 1, -1)
+        pass
+    pass
+
+class Perceptron_stochastic(object):
+    def __init__(self, eta = 0.01, n_iter=10):
+        self.eta = eta;
+        self.n_iter = n_iter;
+        pass
+    
+    def fit(self, X, y):
+        self.w_ = np.zeros(1 + X.shape[1]);
+        self.errors_ = [];
+        for i in range(self.n_iter) :
+            errors = 0
+            
+            sel=i%len(X)
+            xi=X[sel,:]
+            update = self.eta * (target - self.predict(xi))
+            self.w_[1:] += update * xi
+            self.w_[0] += update;
+            errors += int(update != 0.0)
+            self.errors_.append(errors)
             pass
         pass
 
