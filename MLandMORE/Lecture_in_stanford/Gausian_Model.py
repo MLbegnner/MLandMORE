@@ -83,7 +83,7 @@ if result==0:
     plt.scatter(5.6,2.4,marker='x',color='yelow')
     pass
 else:
-    plt.scatter(5.6,2.4,marker='x',color='yellow')
+    plt.scatter(5.6,2.4,marker='*',color='yellow')
     pass
 
 plt.show()
