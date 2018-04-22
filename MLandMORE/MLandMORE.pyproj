@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>428c3f33-6ff8-4968-a3b6-f41562537f73</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Lecture_in_stanford\LMS.py</StartupFile>
+    <StartupFile>Lecture_in_stanford\Gausian_Model.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Lecture_in_stanford\Gausian_Model.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Lecture_in_stanford\LMS.py">
       <SubType>Code</SubType>
     </Compile>
