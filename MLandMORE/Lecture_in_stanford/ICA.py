@@ -1,4 +1,7 @@
 #先不用管，这是fastICA不是课程中的ICA
+
+#课程中只是单纯的梯度下降
+#等学习了python的相关模板之后再写
 #!/usr/bin/env python
 
 #FastICA from ICA book, table 8.4

@@ -1,0 +1,8 @@
+详细参考
+1、https://blog.csdn.net/bbbeoy/article/details/72610186
+
+这个博客是机器学习课程的内容，主要是使用降维产生一个模型，使用这个模型模拟数据点生产，再进行EM算法
+ 
+2、https://www.cnblogs.com/panpansky/archive/2015/06/29/4608511.html
+这个博客是深入学习，有兴趣可以看下，但内容比较超前，需要一定的知识储备
+注意与PCA的区别
